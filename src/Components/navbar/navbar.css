@@ -1,0 +1,133 @@
+.NavBar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:2rem 6rem;
+}
+
+.NavBar-links{
+    flex:1;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.NavBar-links-logo img{
+    margin-top:7px;
+    width: 62px;
+    height: 23px;
+    margin-right:2rem;
+}
+
+.NavBar-links-container{
+    display:flex;
+}
+
+.NavBar-links-signIn{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.NavBar-links-container p,
+.NavBar-links-signIn p,
+.NavBar-links-mobileMenu{
+    color:white;
+    font-family:var(--font-family);
+    font-weight:500;
+    font-size:18px;
+    line-height:25px;
+    text-transform:capitalize;
+    margin:0 1rem;
+    cursor:pointer;
+}
+
+.NavBar-links-signIn button,
+.mobile-signUp button{
+    padding:1rem 1.5rem;
+    background: #FF4820;
+    border-radius: 5px;
+    border:none;
+    outline:none;
+    color:white;
+    font-size:18px;
+    font-family:var(--font-family);
+    cursor:pointer;
+}
+
+.NavBar-links-mobileMenu {
+    margin-left:1rem;
+    display:none;
+    position:relative;
+}
+
+.NavBar-links-mobileMenu svg {
+    cursor: pointer;
+}
+
+.NavBar-links-mobileMenu_container{
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+    flex-direction:column;
+    text-align:end;
+    background:var(--footercolor);
+    padding:2rem;
+    position:absolute;
+    top:40px;
+    right:0;
+    margin-top:1rem;
+    min-width:210px;
+    border-radius:5px;
+    box-shadow:0 0 5 rgba(0,0,0,0.2);
+}
+
+.NavBar-links-mobileMenu_container p {
+    margin:1rem 0rem;
+}
+
+.mobile-SignUp {
+    display:none;
+}
+
+@media screen and (max-width:1050px){
+    .NavBar-links-container{
+        display:none;
+    }
+
+    .NavBar-links-mobileMenu{
+        display:flex;
+    }
+
+    .mobile-SignUp{
+        display:none;
+    }
+}
+
+@media screen and (max-width:700px){
+    .NavBar{
+        padding:2rem 4rem;
+    }
+
+    .NavBar-links-signIn{
+        display:none;
+    }
+}
+
+@media screen and (max-width:550px){
+    .NavBar{
+        padding:2rem;
+    }
+
+    .NavBar-links-signIn{
+        display:none;
+    }
+
+    .NavBar-links-mobileMenu_container{
+        top:20px;
+    }
+
+    .mobile-signUp{
+        display:block;
+    }
+}
